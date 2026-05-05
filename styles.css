@@ -1,0 +1,10 @@
+.grid-div {
+  border: 1px solid black;
+  aspect-ratio: 1;
+  width: 100%;
+}
+
+.gridRow {
+  display: flex;
+  height: 100px;
+}
