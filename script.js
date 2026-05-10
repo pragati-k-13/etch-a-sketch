@@ -2,7 +2,7 @@ const grid = document.querySelector("#grid");
 
 function createGrid(numberOfDivs) {
   // Create rows
-  for (let i = 0; i <= numberOfDivs; i++) {
+  for (let i = 0; i < numberOfDivs; i++) {
     const gridRow = document.createElement("div");
     gridRow.classList.add("gridRow");
 
