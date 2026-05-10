@@ -1,4 +1,5 @@
 const grid = document.querySelector("#grid");
+const button = document.querySelector("button");
 
 function createGrid(numberOfDivs) {
   // Create rows
@@ -17,3 +18,14 @@ function createGrid(numberOfDivs) {
 }
 
 createGrid(4);
+
+button.addEventListener("click", () => {
+  let size = prompt("How many boxes per side?");
+
+  if (size > 100) {
+    alert("Number cannot be more than 100!");
+  } else {
+    grid.replaceChildren();
+    createGrid(size);
+  }
+});
