@@ -19,6 +19,19 @@ function createGrid(numberOfDivs) {
 
 createGrid(4);
 
+// Random colours on hover
+const eachDiv = document.querySelectorAll(".grid-div");
+for (let i = 0; i <= eachDiv.length; i++) {
+  eachDiv[i].addEventListener("mouseenter", () => {
+    const randomColor = `hsl(${Math.floor(Math.random() * 255).toString()}, 50%, 90%)`;
+    eachDiv[i].style.backgroundColor = randomColor;
+  });
+
+  eachDiv[i].addEventListener("mouseleave", () => {
+    eachDiv[i].style.backgroundColor = "#ffffff";
+  });
+}
+
 button.addEventListener("click", () => {
   let size = prompt("How many boxes per side?");
 
