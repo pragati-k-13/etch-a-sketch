@@ -10,7 +10,7 @@ function createGrid(numberOfDivs) {
     // Create divs per row
     let htmlContent = "";
     for (let i = 0; i < numberOfDivs; i++) {
-      htmlContent += `<div class="grid-div"></div>`;
+      htmlContent += `<div class="grid-div" data-hover-color="hsl(${Math.random() * 360},60%,40%)"></div>`;
     }
     gridRow.innerHTML = htmlContent;
     grid.appendChild(gridRow);
@@ -21,16 +21,32 @@ createGrid(4);
 
 // Random colours on hover
 const eachDiv = document.querySelectorAll(".grid-div");
-for (let i = 0; i <= eachDiv.length; i++) {
+for (let i = 0; i < eachDiv.length; i++) {
   eachDiv[i].addEventListener("mouseenter", () => {
-    const randomColor = `hsl(${Math.floor(Math.random() * 255).toString()}, 50%, 90%)`;
-    eachDiv[i].style.backgroundColor = randomColor;
+    eachDiv[i].style.backgroundColor = eachDiv[i].dataset.hoverColor;
   });
 
   eachDiv[i].addEventListener("mouseleave", () => {
     eachDiv[i].style.backgroundColor = "#ffffff";
   });
 }
+
+// Random colours on hover
+// const eachDiv = document.querySelectorAll(".grid-div");
+// for (let i = 0; i <= eachDiv.length; i++) {
+//   eachDiv[i].addEventListener("mouseenter", () => {
+//     const randomColor = `hsl(${Math.floor(Math.random() * 255).toString()}, 50%, 90%)`;
+//     eachDiv[i].style.backgroundColor = randomColor;
+//     let currentOpacity = parseFloat(eachDiv[i].style.opacity);
+//     if (currentOpacity < 100) {
+//       eachDiv[i].style.opacity = currentOpacity + 10;
+//     }
+//   });
+
+//   eachDiv[i].addEventListener("mouseleave", () => {
+//     eachDiv[i].style.backgroundColor = "#ffffff";
+//   });
+// }
 
 button.addEventListener("click", () => {
   let size = prompt("How many boxes per side?");
