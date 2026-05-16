@@ -26,7 +26,6 @@ for (let i = 0; i < eachDiv.length; i++) {
     let currentOpacity = parseFloat(eachDiv[i].style.opacity) || 0.1;
     if (currentOpacity < 1) {
       eachDiv[i].style.opacity = currentOpacity + 0.1;
-      console.log(currentOpacity);
     }
   });
 }
@@ -51,7 +50,6 @@ button.addEventListener("click", () => {
         let currentOpacity = parseFloat(eachDiv[i].style.opacity) || 0.1;
         if (currentOpacity < 1) {
           eachDiv[i].style.opacity = currentOpacity + 0.1;
-          console.log(currentOpacity);
         }
       });
     }
