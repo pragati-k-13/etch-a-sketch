@@ -6,22 +6,27 @@ body {
 }
 
 .grid-div {
-  border-right: 1px solid lightgrey;
+  /* border-right: 1px solid lightgrey; */
   aspect-ratio: 1 / 1;
   max-width: 100%;
   max-height: 100%;
   flex-grow: 1;
+  /* box-sizing: border-box; */
+  opacity: 0.1;
 }
 
-.grid-div:hover {
+/* .grid-div:hover {
   background-color: #f4f4f4;
-}
+} */
 
 .gridRow {
   display: flex;
-  height: 100%;
+  min-height: 0;
   width: 100%;
-  border-bottom: 1px solid lightgrey;
+  /* border-bottom: 1px solid lightgrey; */
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* box-sizing: border-box; */
 }
 
 #grid {
@@ -31,9 +36,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid lightgray;
-  border-left: 1px solid lightgray;
+  /* border-top: 1px solid lightgray;
+  border-left: 1px solid lightgray; */
   margin: 0 auto;
+  /* box-sizing: border-box; */
 }
 
 #button {
@@ -47,4 +53,5 @@ button {
   color: white;
   border-radius: 6px;
   cursor: pointer;
+  letter-spacing: 5%;
 }
